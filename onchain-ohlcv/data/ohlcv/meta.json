@@ -1,0 +1,85 @@
+{
+  "name": "Open on-chain BTC/USD OHLCV",
+  "version": "0.1.0",
+  "license": "CC-BY-4.0",
+  "attribution": "Open on-chain BTC/USD OHLCV (onchain-ohlcv), CC BY 4.0",
+  "generatedAt": "2026-09-24T17:01:16.036Z",
+  "from": "2026-06-26T16:52:00Z",
+  "to": "2026-09-24T16:52:00Z",
+  "pools": [
+    {
+      "id": "base-cbbtc-usdc-5",
+      "chain": "base",
+      "address": "0xfbb6eed8e7aa03b138556eedaf5d271a5e1e43ef",
+      "wrapped": "cbBTC",
+      "quote": "USDC",
+      "feeTier": 0.0005
+    },
+    {
+      "id": "base-cbbtc-usdc-30",
+      "chain": "base",
+      "address": "0xec558e484cc9f2210714e345298fdc53b253c27d",
+      "wrapped": "cbBTC",
+      "quote": "USDC",
+      "feeTier": 0.003
+    },
+    {
+      "id": "eth-wbtc-usdc-5",
+      "chain": "ethereum",
+      "address": "0x9a772018fbd77fcd2d25657e5c547baff3fd7d16",
+      "wrapped": "WBTC",
+      "quote": "USDC",
+      "feeTier": 0.0005
+    },
+    {
+      "id": "eth-wbtc-usdc-30",
+      "chain": "ethereum",
+      "address": "0x99ac8ca7087fa4a2a1fb6357269965a2014abc35",
+      "wrapped": "WBTC",
+      "quote": "USDC",
+      "feeTier": 0.003
+    },
+    {
+      "id": "eth-wbtc-usdt-30",
+      "chain": "ethereum",
+      "address": "0x9db9e0e53058c89e5b94e29621a205198648425b",
+      "wrapped": "WBTC",
+      "quote": "USDT",
+      "feeTier": 0.003
+    },
+    {
+      "id": "eth-cbbtc-usdc-5",
+      "chain": "ethereum",
+      "address": "0x54e58c986818903d2d86dafe03f5f5e6c2ca6710",
+      "wrapped": "cbBTC",
+      "quote": "USDC",
+      "feeTier": 0.0005
+    },
+    {
+      "id": "eth-cbbtc-usdc-30",
+      "chain": "ethereum",
+      "address": "0x4548280ac92507c9092a511c7396cbea78fa9e49",
+      "wrapped": "cbBTC",
+      "quote": "USDC",
+      "feeTier": 0.003
+    }
+  ],
+  "stats": {
+    "compositeMinutes": 103883,
+    "droppedMinutes": 1,
+    "clampedExtremes": 0,
+    "hours": 2161,
+    "days": 91
+  },
+  "method": {
+    "priceSource": "end-of-block pool price (Uniswap v3 sqrtPriceX96)",
+    "composite": "volume-weighted median across pools per minute",
+    "filter": {
+      "hampelWindowMin": 15,
+      "minDeviation": 0.015,
+      "k": 6
+    },
+    "usdtUsd": "rolling 24h median of eth-wbtc-usdc-5 / eth-wbtc-usdt-30",
+    "usdc": "treated as 1 USD"
+  }
+}

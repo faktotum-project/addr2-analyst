@@ -1,0 +1,283 @@
+{
+  "generatedAt": "2026-09-24T17:01:22.884Z",
+  "period": {
+    "from": "2026-06-26T16:00:00.000Z",
+    "to": "2026-09-24T16:00:00.000Z"
+  },
+  "results": {
+    "Coinbase BTC-USD": {
+      "1h": {
+        "barsOurs": 2161,
+        "barsRef": 2162,
+        "matched": 2161,
+        "coveragePct": 100,
+        "closeDiffPct": {
+          "medianAbs": 0.0361041019133701,
+          "p95Abs": 0.23077033748746256,
+          "p99Abs": 0.35809128152157754,
+          "maxAbs": 0.5390857741453869,
+          "medianSigned": 0.010813987733171437
+        },
+        "highDiffPct": {
+          "medianAbs": 0.03782984338768225,
+          "p95Abs": 0.18639047649704477,
+          "p99Abs": 0.3489731869865009,
+          "maxAbs": 0.9201700920473233,
+          "medianSigned": -0.02780922931324703
+        },
+        "lowDiffPct": {
+          "medianAbs": 0.06405883974094362,
+          "p95Abs": 0.21728328202118563,
+          "p99Abs": 0.38109397144001633,
+          "maxAbs": 0.8948779714023414,
+          "medianSigned": 0.03861012974271105
+        },
+        "rangeRatioMedian": 0.9254118311051406,
+        "returnCorrelation": 0.9454794892499534,
+        "volumeLogCorrelation": 0.754497343758106,
+        "indicators": {
+          "rsi": {
+            "last": {
+              "ours": 53.509726076930235,
+              "ref": 52.13442296285377
+            },
+            "medianAbsDiff": 0.7786535233464988,
+            "p95AbsDiff": 4.346800231568572,
+            "unit": "punti",
+            "zoneAgreementPct": 97.81089892873777
+          },
+          "ema20": {
+            "last": {
+              "ours": 84117.1295352221,
+              "ref": 84147.77376230923
+            },
+            "medianAbsDiff": 0.020906402418119363,
+            "p95AbsDiff": 0.06008263972864247,
+            "unit": "%"
+          },
+          "ema50": {
+            "last": {
+              "ours": 84508.54379309766,
+              "ref": 84535.89788949235
+            },
+            "medianAbsDiff": 0.01920331261434649,
+            "p95AbsDiff": 0.049554066666679386,
+            "unit": "%"
+          },
+          "ema200": {
+            "last": {
+              "ours": 82444.11789558633,
+              "ref": 82461.2393389156
+            },
+            "medianAbsDiff": 0.017388209378688124,
+            "p95AbsDiff": 0.046248239758939214,
+            "unit": "%"
+          },
+          "macdHist": {
+            "last": {
+              "ours": 130.3030365934111,
+              "ref": 122.05813080119998
+            },
+            "medianAbsDiff": 2.7677851841871473,
+            "p95AbsDiff": 14.200286162760165,
+            "unit": "punti",
+            "signAgreementPct": 97.79135338345864
+          },
+          "atr": {
+            "last": {
+              "ours": 642.3706609065221,
+              "ref": 676.6410187624047
+            },
+            "medianAbsDiff": 7.586414624658621,
+            "p95AbsDiff": 30.31217014952339,
+            "unit": "%"
+          },
+          "bbUpper": {
+            "last": {
+              "ours": 84948.17536652878,
+              "ref": 84819.13365335928
+            },
+            "medianAbsDiff": 0.031414879596181056,
+            "p95AbsDiff": 0.10606912249384592,
+            "unit": "%"
+          }
+        }
+      },
+      "1d": {
+        "barsOurs": 91,
+        "barsRef": 91,
+        "matched": 91,
+        "coveragePct": 100,
+        "closeDiffPct": {
+          "medianAbs": 0.03276839158358191,
+          "p95Abs": 0.1869770633250334,
+          "p99Abs": 0.5390857741453869,
+          "maxAbs": 0.5390857741453869,
+          "medianSigned": 0.012071948814940114
+        },
+        "highDiffPct": {
+          "medianAbs": 0.05031862757304273,
+          "p95Abs": 0.26867977368361107,
+          "p99Abs": 0.7772832179360423,
+          "maxAbs": 0.7772832179360423,
+          "medianSigned": -0.043734389051663936
+        },
+        "lowDiffPct": {
+          "medianAbs": 0.07862104063651731,
+          "p95Abs": 0.3949310870400291,
+          "p99Abs": 2.113786017839625,
+          "maxAbs": 2.113786017839625,
+          "medianSigned": 0.06633570007206213
+        },
+        "rangeRatioMedian": 0.9656393758710655,
+        "returnCorrelation": 0.998088301904963,
+        "volumeLogCorrelation": 0.8584213004771981
+      }
+    },
+    "Binance BTCUSDT": {
+      "1h": {
+        "barsOurs": 2161,
+        "barsRef": 2161,
+        "matched": 2161,
+        "coveragePct": 100,
+        "closeDiffPct": {
+          "medianAbs": 0.06867246804481697,
+          "p95Abs": 0.2560362564389851,
+          "p99Abs": 0.3983783577991229,
+          "maxAbs": 0.5844131055680046,
+          "medianSigned": -0.06397165104676805
+        },
+        "highDiffPct": {
+          "medianAbs": 0.08789977057225284,
+          "p95Abs": 0.18079795836650758,
+          "p99Abs": 0.30135928635925957,
+          "maxAbs": 0.9097436574616702,
+          "medianSigned": -0.07635294956113148
+        },
+        "lowDiffPct": {
+          "medianAbs": 0.05142267561695224,
+          "p95Abs": 0.2954651271067976,
+          "p99Abs": 0.4519350021514046,
+          "maxAbs": 1.0125832288988668,
+          "medianSigned": -0.04531062543338127
+        },
+        "rangeRatioMedian": 0.9481395700116027,
+        "returnCorrelation": 0.9458476141142925,
+        "volumeLogCorrelation": 0.7496682802908579,
+        "indicators": {
+          "rsi": {
+            "last": {
+              "ours": 53.509726076930235,
+              "ref": 52.30937003805381
+            },
+            "medianAbsDiff": 0.7737987573937417,
+            "p95AbsDiff": 4.358339047648819,
+            "unit": "punti",
+            "zoneAgreementPct": 97.76432231020028
+          },
+          "ema20": {
+            "last": {
+              "ours": 84117.1295352221,
+              "ref": 84167.20916678527
+            },
+            "medianAbsDiff": 0.0681205275150587,
+            "p95AbsDiff": 0.13818617814345124,
+            "unit": "%"
+          },
+          "ema50": {
+            "last": {
+              "ours": 84508.54379309766,
+              "ref": 84551.05318801128
+            },
+            "medianAbsDiff": 0.0695747390477397,
+            "p95AbsDiff": 0.12182679739850544,
+            "unit": "%"
+          },
+          "ema200": {
+            "last": {
+              "ours": 82444.11789558633,
+              "ref": 82483.82356443674
+            },
+            "medianAbsDiff": 0.07112013887681234,
+            "p95AbsDiff": 0.09873301032304882,
+            "unit": "%"
+          },
+          "macdHist": {
+            "last": {
+              "ours": 130.3030365934111,
+              "ref": 122.83216330875831
+            },
+            "medianAbsDiff": 2.937129593814973,
+            "p95AbsDiff": 14.108541020752568,
+            "unit": "punti",
+            "signAgreementPct": 97.55639097744361
+          },
+          "atr": {
+            "last": {
+              "ours": 642.3706609065221,
+              "ref": 651.4161574046874
+            },
+            "medianAbsDiff": 7.470257433132654,
+            "p95AbsDiff": 34.99258984415099,
+            "unit": "%"
+          },
+          "bbUpper": {
+            "last": {
+              "ours": 84948.17536652878,
+              "ref": 84836.03700773478
+            },
+            "medianAbsDiff": 0.06444561814081817,
+            "p95AbsDiff": 0.15925459474982473,
+            "unit": "%"
+          }
+        }
+      },
+      "1d": {
+        "barsOurs": 91,
+        "barsRef": 91,
+        "matched": 91,
+        "coveragePct": 100,
+        "closeDiffPct": {
+          "medianAbs": 0.05596893203883013,
+          "p95Abs": 0.24693431832606416,
+          "p99Abs": 0.5476205738338957,
+          "maxAbs": 0.5476205738338957,
+          "medianSigned": -0.05291624864307565
+        },
+        "highDiffPct": {
+          "medianAbs": 0.10711367619332668,
+          "p95Abs": 0.24162092576884842,
+          "p99Abs": 0.940569608388675,
+          "maxAbs": 0.940569608388675,
+          "medianSigned": -0.10089699040670697
+        },
+        "lowDiffPct": {
+          "medianAbs": 0.05220712186636556,
+          "p95Abs": 0.5949326292040147,
+          "p99Abs": 1.9498774362754379,
+          "maxAbs": 1.9498774362754379,
+          "medianSigned": -0.031002109809064038
+        },
+        "rangeRatioMedian": 0.9762771942985764,
+        "returnCorrelation": 0.9979841285995473,
+        "volumeLogCorrelation": 0.8179871021624201
+      }
+    }
+  },
+  "peg": {
+    "wbtcVsCbbtcSpreadBps": {
+      "median": -3.2,
+      "p95Abs": 20.1,
+      "maxAbs": 70.6
+    }
+  },
+  "usdtUsd": {
+    "min": 0.99634,
+    "max": 1.00272,
+    "median": 1.00051
+  },
+  "gaps": {
+    "hoursWithoutTrades": 0,
+    "hoursWithFewMinutes": 2
+  }
+}

@@ -1,0 +1,383 @@
+{
+  "meta": {
+    "symbol": "BTCUSDT",
+    "timeframe": "1d",
+    "bars": 500,
+    "asOf": 1790208000,
+    "asOfIso": "2026-09-24 00:00 UTC",
+    "lastBarClosed": false,
+    "generatedAt": "2026-09-24T13:00:54.994Z",
+    "warnings": []
+  },
+  "price": {
+    "last": 83618.01,
+    "open": 84397.6,
+    "high": 84622.01,
+    "low": 82874.93,
+    "changePct": -0.92,
+    "change20BarsPct": 4.97,
+    "rangeHigh": 126199.63,
+    "rangeLow": 57800.19
+  },
+  "trend": {
+    "ema20": 80315,
+    "ema50": 76111,
+    "ema200": 74078,
+    "sma200": 70883,
+    "priceVsEma200Pct": 12.88,
+    "adx": 44.3,
+    "plusDI": 37,
+    "minusDI": 15.4,
+    "adxRegime": "trend forte",
+    "lastGoldenDeath": {
+      "kind": "golden",
+      "time": "2026-09-14 00:00 UTC",
+      "barsAgo": 10
+    },
+    "lastEma20_50Cross": {
+      "dir": "up",
+      "barsAgo": 35
+    }
+  },
+  "momentum": {
+    "rsi": 62.8,
+    "rsiPrev": 65.5,
+    "rsiZone": "neutro",
+    "macd": 2424,
+    "macdSignal": 1975,
+    "macdHist": 449,
+    "macdHistSlope": "in calo",
+    "stochK": 72.5,
+    "stochD": 85.6,
+    "divergences": [
+      {
+        "type": "bullish",
+        "from": {
+          "time": "2026-06-05 00:00 UTC",
+          "price": 59130.91,
+          "rsi": 15.6
+        },
+        "to": {
+          "time": "2026-06-25 00:00 UTC",
+          "price": 58115.01,
+          "rsi": 30.5
+        },
+        "barsAgo": 91
+      },
+      {
+        "type": "bullish",
+        "from": {
+          "time": "2026-06-25 00:00 UTC",
+          "price": 58115.01,
+          "rsi": 30.5
+        },
+        "to": {
+          "time": "2026-07-01 00:00 UTC",
+          "price": 57800.19,
+          "rsi": 37.2
+        },
+        "barsAgo": 85
+      }
+    ]
+  },
+  "volatility": {
+    "atr": 2484,
+    "atrPct": 2.97,
+    "bbUpper": 86203,
+    "bbMid": 79729,
+    "bbLower": 73255,
+    "bbPctB": 0.8,
+    "bbWidth": 0.1624,
+    "bbWidthPercentile": 77,
+    "squeeze": false
+  },
+  "volume": {
+    "last": 9587.6,
+    "vsSma20": 0.63,
+    "obvAboveEma": false,
+    "anchoredVwap": 70876,
+    "vwapAnchor": "2026-07-01 00:00 UTC"
+  },
+  "volumeProfile": {
+    "anchored": {
+      "window": "dallo swing 2026-07-01 00:00 UTC",
+      "bars": 86,
+      "volumeUnit": "USDT",
+      "binSizeUsd": 617,
+      "poc": 64274,
+      "vah": 78147,
+      "val": 57800,
+      "pocDistancePct": -23.13,
+      "position": "sopra la value area"
+    },
+    "recent": {
+      "window": "180 giorni",
+      "bars": 180,
+      "volumeUnit": "USDT",
+      "binSizeUsd": 617,
+      "poc": 64274,
+      "vah": 77531,
+      "val": 58417,
+      "pocDistancePct": -23.13,
+      "position": "sopra la value area"
+    }
+  },
+  "structure": {
+    "supports": [
+      {
+        "price": 82141,
+        "distancePct": -1.77,
+        "touches": 7,
+        "strength": 8.04,
+        "lastTouch": "2026-09-03 00:00 UTC"
+      },
+      {
+        "price": 75244,
+        "distancePct": -10.01,
+        "touches": 5,
+        "strength": 6.34,
+        "lastTouch": "2026-09-15 00:00 UTC"
+      },
+      {
+        "price": 65737,
+        "distancePct": -21.38,
+        "touches": 7,
+        "strength": 8.7,
+        "lastTouch": "2026-08-09 00:00 UTC"
+      },
+      {
+        "price": 58762,
+        "distancePct": -29.73,
+        "touches": 4,
+        "strength": 4.96,
+        "lastTouch": "2026-07-01 00:00 UTC"
+      }
+    ],
+    "resistances": [
+      {
+        "price": 94509,
+        "distancePct": 13.03,
+        "touches": 3,
+        "strength": 2.8,
+        "lastTouch": "2026-01-05 00:00 UTC"
+      },
+      {
+        "price": 98860,
+        "distancePct": 18.23,
+        "touches": 4,
+        "strength": 2.97,
+        "lastTouch": "2026-01-14 00:00 UTC"
+      },
+      {
+        "price": 107792,
+        "distancePct": 28.91,
+        "touches": 3,
+        "strength": 2.36,
+        "lastTouch": "2025-11-11 00:00 UTC"
+      },
+      {
+        "price": 111240,
+        "distancePct": 33.03,
+        "touches": 4,
+        "strength": 2.34,
+        "lastTouch": "2025-08-03 00:00 UTC"
+      }
+    ],
+    "fibonacci": {
+      "direction": "up",
+      "lookbackBars": 150,
+      "swingFrom": {
+        "price": 57800,
+        "time": "2026-07-01 00:00 UTC"
+      },
+      "swingTo": {
+        "price": 87396,
+        "time": "2026-09-21 00:00 UTC"
+      },
+      "levels": [
+        {
+          "ratio": 0,
+          "price": 87396,
+          "distancePct": 4.52
+        },
+        {
+          "ratio": 0.236,
+          "price": 80411,
+          "distancePct": -3.84
+        },
+        {
+          "ratio": 0.382,
+          "price": 76090,
+          "distancePct": -9
+        },
+        {
+          "ratio": 0.5,
+          "price": 72598,
+          "distancePct": -13.18
+        },
+        {
+          "ratio": 0.618,
+          "price": 69106,
+          "distancePct": -17.36
+        },
+        {
+          "ratio": 0.786,
+          "price": 64134,
+          "distancePct": -23.3
+        },
+        {
+          "ratio": 1,
+          "price": 57800,
+          "distancePct": -30.88
+        }
+      ],
+      "extensions": [
+        {
+          "ratio": 1.272,
+          "price": 95446
+        },
+        {
+          "ratio": 1.618,
+          "price": 105686
+        }
+      ]
+    },
+    "trendlines": [
+      {
+        "kind": "support",
+        "broken": false,
+        "from": {
+          "price": 62535,
+          "time": "2026-08-14 00:00 UTC"
+        },
+        "to": {
+          "price": 74968,
+          "time": "2026-09-15 00:00 UTC"
+        },
+        "valueNow": 78465,
+        "distancePct": -6.16
+      },
+      {
+        "kind": "resistance",
+        "broken": true,
+        "from": {
+          "price": 82850,
+          "time": "2026-05-06 00:00 UTC"
+        },
+        "to": {
+          "price": 82300,
+          "time": "2026-09-03 00:00 UTC"
+        },
+        "valueNow": 82204,
+        "distancePct": -1.69
+      }
+    ],
+    "candlePatterns": [
+      {
+        "time": "2026-09-07 00:00 UTC",
+        "name": "Bearish engulfing",
+        "bias": "bearish",
+        "barsAgo": 17
+      },
+      {
+        "time": "2026-09-09 00:00 UTC",
+        "name": "Doji",
+        "bias": "neutral",
+        "barsAgo": 15
+      },
+      {
+        "time": "2026-09-14 00:00 UTC",
+        "name": "Bullish engulfing",
+        "bias": "bullish",
+        "barsAgo": 10
+      },
+      {
+        "time": "2026-09-20 00:00 UTC",
+        "name": "Doji",
+        "bias": "neutral",
+        "barsAgo": 4
+      }
+    ],
+    "lastSwingHigh": {
+      "price": 82300,
+      "time": "2026-09-03 00:00 UTC"
+    },
+    "lastSwingLow": {
+      "price": 74967.97,
+      "time": "2026-09-15 00:00 UTC"
+    }
+  },
+  "derivatives": {
+    "fundingRate": 0.00001062,
+    "fundingAnnualizedPct": 1.2,
+    "funding7dAvg": 0.00006328476190476191,
+    "basisPct": -0.037,
+    "openInterestBtc": 96495,
+    "openInterestUsd": 8065534120,
+    "oiChange7dPct": -8.72,
+    "oiChange30dPct": -7.59
+  },
+  "sentiment": {
+    "value": 71,
+    "label": "Greed",
+    "weekAgo": 50,
+    "monthAgo": 65
+  },
+  "cycle": null,
+  "scores": {
+    "trend": {
+      "score": 4,
+      "max": 4,
+      "bias": "bullish",
+      "reasons": [
+        "prezzo sopra EMA200",
+        "EMA50 > EMA200",
+        "EMA20 > EMA50",
+        "+DI > −DI"
+      ]
+    },
+    "momentum": {
+      "score": 2,
+      "max": 4,
+      "bias": "bullish",
+      "reasons": [
+        "RSI 62.8 > 55",
+        "istogramma MACD positivo",
+        "MACD sopra zero",
+        "StochRSI K < D"
+      ]
+    },
+    "volume": {
+      "score": 1,
+      "max": 3,
+      "bias": "bullish",
+      "reasons": [
+        "OBV sotto la sua EMA20",
+        "prezzo sopra VWAP ancorato",
+        "prezzo sopra POC dello swing"
+      ]
+    },
+    "derivatives": {
+      "score": 0,
+      "max": 2,
+      "bias": "neutral",
+      "reasons": [
+        "funding neutro",
+        "OI 7g -8.7%"
+      ]
+    },
+    "sentiment": {
+      "score": 0,
+      "max": 1,
+      "bias": "neutral",
+      "reasons": [
+        "Fear & Greed 71"
+      ]
+    }
+  },
+  "overall": {
+    "score": 56,
+    "bias": "bullish",
+    "note": "score −100…+100, media pesata dei blocchi"
+  }
+}

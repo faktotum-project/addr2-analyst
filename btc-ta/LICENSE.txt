@@ -1,0 +1,16 @@
+[BOZZA DA FAR VERIFICARE A UN LEGALE PRIMA DELLA VENDITA]
+
+btc-ta — Licenza d'uso
+Copyright (c) 2026 [AUTORE / RAGIONE SOCIALE]. Tutti i diritti riservati.
+
+1. Concessione. Con l'acquisto ricevi una licenza personale, non esclusiva e non trasferibile a installare e usare la skill btc-ta su [NUMERO] dispositivi di tua proprietà, con qualsiasi coding agent.
+
+2. Divieti. Non puoi rivendere, ridistribuire, sublicenziare o pubblicare la skill, in tutto o in parte, né versioni modificate, senza autorizzazione scritta.
+
+3. Componenti di terze parti. I componenti elencati in THIRD_PARTY_NOTICES.md restano soggetti alle rispettive licenze, che prevalgono su questa per quanto li riguarda.
+
+4. Dati di mercato. La skill scarica dati da servizi di terze parti dal tuo computer. Il rispetto delle loro condizioni d'uso è a tuo carico.
+
+5. Nessuna consulenza. La skill produce analisi automatiche a scopo informativo. Non è consulenza finanziaria o d'investimento e non costituisce raccomandazione di acquisto o vendita.
+
+6. Esclusione di garanzia. La skill è fornita "così com'è", senza garanzie di alcun tipo. L'autore non risponde di perdite derivanti dal suo uso, nei limiti consentiti dalla legge.

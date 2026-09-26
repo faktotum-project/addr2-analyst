@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a1119">
+  <meta name="description" content="OnlySats Analysis: analisi di Bitcoin sul medio-lungo periodo (settimanale e mensile) curate da addr2, con grafici e due livelli di lettura in italiano.">
+  <title>OnlySats Analysis — analisi Bitcoin di addr2</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenuto">Vai all'analisi</a>
+  <div class="site-shell">
+    <header class="masthead">
+      <a class="brand" href="index.html" aria-label="OnlySats Analysis, pagina iniziale">
+        <span class="brand-mark" aria-hidden="true">◒</span>
+        <span class="brand-text"><strong>ONLYSATS</strong><small>ANALYSIS</small></span>
+      </a>
+      <div class="masthead-right"><span>Analisi tecniche di <strong>addr2</strong></span><a href="#archivio">Archivio <span aria-hidden="true">↗</span></a></div>
+    </header>
+
+    <main id="contenuto">
+      <nav class="timeframe-nav" aria-label="Scegli il timeframe"><span>TIMEFRAME</span><div id="timeframe-options"></div></nav>
+      <section class="story-head" aria-labelledby="article-title">
+        <div class="story-heading">
+          <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span><span id="article-label">Bitcoin · analisi</span><span class="eyebrow-dot" aria-hidden="true">·</span><span id="article-date">24 settembre 2026</span></p>
+          <h1 id="article-title">Analisi Bitcoin</h1>
+          <p class="story-deck" id="article-intro"></p>
+          <p class="snapshot-note"><span class="snapshot-icon" aria-hidden="true">◷</span><span id="snapshot-note"></span></p>
+        </div>
+        <div class="reading-card" aria-label="Livello di lettura">
+          <span class="reading-card-label">SCEGLI COME LEGGERE</span>
+          <div class="mode-switch" role="group" aria-label="Livello di analisi">
+            <button type="button" class="mode-button" data-mode="beginner" aria-pressed="true">Principiante</button>
+            <button type="button" class="mode-button" data-mode="pro" aria-pressed="false">Pro</button>
+          </div>
+          <p id="mode-description">Parole semplici, termini spiegati e contesto per iniziare.</p>
+        </div>
+      </section>
+
+      <section class="market-strip" aria-label="Dati principali dell'analisi">
+        <div class="market-item price-item"><span>PREZZO NEL REPORT</span><strong id="metric-price"></strong><small id="metric-pair"></small></div>
+        <div class="market-item"><span>VARIAZIONE BARRA</span><strong id="metric-change"></strong><small id="metric-timeframe"></small></div>
+        <div class="market-item"><span>SUPPORTO</span><strong id="metric-support"></strong><small>zona osservata</small></div>
+        <div class="market-item"><span>RESISTENZA</span><strong id="metric-resistance"></strong><small>zona osservata</small></div>
+      </section>
+
+      <section class="chart-section" aria-labelledby="chart-title">
+        <div class="section-heading chart-heading">
+          <div><span class="section-index">01 / IL GRAFICO</span><h2 id="chart-title">Il prezzo nel contesto</h2></div>
+          <a class="chart-link" id="full-chart-link" href="#" target="_blank" rel="noopener">Apri il grafico tecnico <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="chart-panel">
+          <div class="chart-topline"><span id="chart-pair"></span><span id="chart-period"></span></div>
+          <div class="canvas-wrap"><canvas id="price-chart" role="img" aria-label="Andamento del prezzo Bitcoin con supporto e resistenza"></canvas><div id="chart-tooltip" class="chart-tooltip" hidden></div></div>
+          <div class="chart-legend"><span><i class="legend-line"></i> Prezzo</span><span><i class="legend-dash support"></i> Supporto</span><span><i class="legend-dash resistance"></i> Resistenza</span></div>
+        </div>
+        <p class="chart-caption">Il grafico sintetico mostra i prezzi di chiusura delle barre. <a id="chart-caption-link" href="#" target="_blank" rel="noopener">Nel grafico tecnico completo</a> trovi candele, indicatori e livelli annotati.</p>
+      </section>
+
+      <div class="reading-grid">
+        <article class="analysis-copy" aria-labelledby="reading-title">
+          <span class="section-index">02 / LA LETTURA</span>
+          <h2 id="reading-title">L'analisi, passo per passo</h2>
+          <div id="article-sections"></div>
+          <div id="glossary"></div>
+        </article>
+        <aside class="context-panel" aria-label="Dati e fonti">
+          <span class="section-index">NEL REPORT</span>
+          <dl class="indicator-list" id="indicator-list"></dl>
+          <div class="context-divider"></div>
+          <p class="source-title">Fonti dei dati</p>
+          <ul class="source-list" id="source-list"></ul>
+          <p class="source-caveat" id="source-caveat"></p>
+          <a class="cycle-link" id="cycle-link" href="#" target="_blank" rel="noopener" hidden>Apri il grafico del ciclo <span aria-hidden="true">↗</span></a>
+        </aside>
+      </div>
+
+      <section id="archivio" class="archive-section" aria-labelledby="archive-title">
+        <div class="section-heading"><div><span class="section-index">03 / ARCHIVIO</span><h2 id="archive-title">Tutte le analisi</h2></div><span class="archive-count" id="archive-count"></span></div>
+        <div class="archive-grid" id="archive-grid"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span><strong>ONLYSATS</strong> ANALYSIS · addr2</span><p>Analisi informative basate su snapshot datati. I livelli sono osservazioni tecniche, non previsioni o consigli di investimento.</p></footer>
+  </div>
+  <noscript><p class="noscript">Per leggere le analisi e cambiare livello di spiegazione, attiva JavaScript nel browser.</p></noscript>
+</body>
+</html>

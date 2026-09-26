@@ -1,0 +1,7 @@
+btc-ta-output/
+btc-ta-output-*/
+node_modules/
+onlysats-analysis/content/articles.pending.json
+onlysats-analysis/data.js.tmp
+onlysats-analysis/outbox/*.json.tmp
+onlysats-analysis-retired/
