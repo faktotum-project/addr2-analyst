@@ -30,14 +30,8 @@ node onlysats-analysis/build.mjs
 
 ## Pubblicazione e Telegram
 
-La generazione del sito e la notifica sono due passi separati: il messaggio va inviato **dopo** che la nuova versione del sito è online. La scelta dell'hosting è ancora da configurare. Il canale Telegram non è collegato e nessun messaggio viene inviato dall'aggiornamento locale.
+Il sito è pubblicato su Vercel (https://addr2-analyst.vercel.app, Root Directory `onlysats-analysis`) e si aggiorna a ogni push su `main`. Dopo il push, il workflow esegue `notify-telegram.mjs --wait 600`: attende fino a 10 minuti che il `data.js` pubblico contenga il nuovo articolo e solo allora invia il mini riassunto nel gruppo OnlySats, topic "Analisi tecnica" (`TELEGRAM_CHAT_ID=-1002388482188`, `TELEGRAM_THREAD_ID=2`). Il token del bot è il secret di repository `TELEGRAM_BOT_TOKEN`; senza secret l'invio viene saltato. Lo stato di ogni messaggio (`sent` con l'ID Telegram, oppure `sending`) viene committato in `outbox/`, anche se l'invio fallisce.
 
-Quando il sito e il canale saranno pronti, configura `ONLYSATS_SITE_URL` con l'URL pubblico della cartella del blog, `TELEGRAM_BOT_TOKEN` e `TELEGRAM_CHAT_ID` nell'ambiente di esecuzione. Dopo il deploy, controlla i messaggi con:
-
-```bash
-node onlysats-analysis/notify-telegram.mjs --dry-run
-```
-
-Poi il processo di pubblicazione può eseguire `node onlysats-analysis/notify-telegram.mjs`. Prima di inviare verifica via HTTPS che il `data.js` pubblico contenga il nuovo articolo. Il sender invia soltanto messaggi `pending` creati nelle ultime 48 ore, così il collegamento futuro del canale non riversa un archivio di messaggi vecchi. Per un invio specifico usa `--id <id>`. Salva l'ID restituito da Telegram. Se l'esito della richiesta è incerto, lascia il messaggio in stato `sending` per evitare un reinvio cieco: prima di riprovare va verificato il canale.
+Il sender invia soltanto messaggi `pending` creati nelle ultime 48 ore, così non riversa un archivio di messaggi vecchi. Per un invio specifico usa `--id <id>`; per un'anteprima `--dry-run`. Se l'esito della richiesta è incerto, il messaggio resta in stato `sending` per evitare un reinvio cieco: prima di riprovare va verificato il gruppo.
 
 Le fonti CEX hanno condizioni di riutilizzo proprie, descritte in `btc-ta/THIRD_PARTY_NOTICES.md`. Verifica i permessi prima della pubblicazione commerciale. `onchain-ohlcv` è un prototipo che copre solo una parte del mercato.

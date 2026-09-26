@@ -32,12 +32,22 @@ jobs:
       BTC_TA_HISTORY: candles
       BTC_TA_DERIVATIVES: none
       BTC_TA_SENTIMENT: none
+      # Telegram: il token è un secret del repository; senza token l'invio viene saltato.
+      ONLYSATS_SITE_URL: https://addr2-analyst.vercel.app
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: '-1002388482188'   # gruppo OnlySats
+      TELEGRAM_THREAD_ID: '2'              # topic "Analisi tecnica"
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
           node-version: 24
+
+      - name: Configura git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
 
       - name: Scegli il timeframe
         id: tf
@@ -60,8 +70,21 @@ jobs:
             echo "Nessuna nuova candela chiusa: niente da pubblicare."
             exit 0
           fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
           git commit -m "OnlySats: nuove analisi ${{ steps.tf.outputs.tf }} ($(date -u +%Y-%m-%d))"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      # Invia i messaggi pending solo quando l'articolo è visibile sul sito (attende il deploy Vercel fino a 10 minuti).
+      - name: Avvisa il gruppo Telegram
+        if: env.TELEGRAM_BOT_TOKEN != ''
+        run: node onlysats-analysis/notify-telegram.mjs --wait 600
+
+      # Salva sent/sending anche se l'invio fallisce: un messaggio "sending" non va reinviato alla cieca.
+      - name: Salva lo stato dei messaggi
+        if: always() && env.TELEGRAM_BOT_TOKEN != ''
+        run: |
+          git add onlysats-analysis/outbox
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "OnlySats: stato messaggi Telegram"
           git pull --rebase origin main
           git push origin HEAD:main

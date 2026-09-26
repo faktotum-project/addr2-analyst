@@ -9,16 +9,33 @@ const siteDir = dirname(fileURLToPath(import.meta.url));
 const outboxDir = join(siteDir, 'outbox');
 const { values: args } = parseArgs({ options: {
   id: { type: 'string' },
+  wait: { type: 'string', default: '0' },
   'dry-run': { type: 'boolean', default: false }
 } });
 const siteUrl = process.env.ONLYSATS_SITE_URL?.replace(/\/$/, '');
 const token = process.env.TELEGRAM_BOT_TOKEN;
 const chatId = process.env.TELEGRAM_CHAT_ID;
+// Forum topic of the group (e.g. "Analisi tecnica"); empty sends to the main chat.
+const threadId = process.env.TELEGRAM_THREAD_ID ? Number(process.env.TELEGRAM_THREAD_ID) : undefined;
 if (!args['dry-run'] && (!siteUrl || !token || !chatId)) {
   throw new Error('Configura ONLYSATS_SITE_URL, TELEGRAM_BOT_TOKEN e TELEGRAM_CHAT_ID prima di inviare.');
 }
 if (!args['dry-run'] && new URL(siteUrl).protocol !== 'https:') {
   throw new Error('ONLYSATS_SITE_URL deve essere un URL HTTPS pubblico.');
+}
+
+// The deploy starts after the push: poll the public data.js for up to --wait seconds.
+async function waitUntilLive(id) {
+  const deadline = Date.now() + Number(args.wait) * 1000;
+  const liveDataUrl = new URL('data.js', `${siteUrl}/`);
+  for (;;) {
+    try {
+      const response = await fetch(liveDataUrl, { cache: 'no-store', signal: AbortSignal.timeout(20000) });
+      if (response.ok && (await response.text()).includes(`"id":"${id}"`)) return true;
+    } catch {}
+    if (Date.now() >= deadline) return false;
+    await new Promise(resolve => setTimeout(resolve, 15000));
+  }
 }
 
 const files = args.id ? [`${args.id}.json`] : (await readdir(outboxDir)).filter(file => file.endsWith('.json')).sort();
@@ -35,9 +52,7 @@ for (const file of files) {
   if (message.length > 4096) throw new Error(`Messaggio troppo lungo: ${item.id}`);
   if (args['dry-run']) { console.log(`--- ${item.id} ---\n${message}`); continue; }
 
-  const liveDataUrl = new URL('data.js', `${siteUrl}/`);
-  const liveResponse = await fetch(liveDataUrl, { cache: 'no-store', signal: AbortSignal.timeout(20000) });
-  if (!liveResponse.ok || !(await liveResponse.text()).includes(`"id":"${item.id}"`)) {
+  if (!(await waitUntilLive(item.id))) {
     throw new Error(`L'articolo ${item.id} non è ancora visibile nel sito pubblico; Telegram non è stato chiamato.`);
   }
 
@@ -51,7 +66,7 @@ for (const file of files) {
     response = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ chat_id: chatId, text: message }),
+      body: JSON.stringify({ chat_id: chatId, ...(threadId ? { message_thread_id: threadId } : {}), text: message }),
       signal: AbortSignal.timeout(20000)
     });
   } catch {
