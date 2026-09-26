@@ -24,9 +24,13 @@ node onlysats-analysis/build.mjs
 
 `content/articles.json` contiene i testi. addr2 può rivederli e migliorarli usando il report come unica fonte per i numeri; dopo le modifiche, esegue di nuovo `build.mjs`.
 
+## Aggiornamento pianificato
+
+`.github/workflows/onlysats-update.yml` esegue `update.mjs` su GitHub Actions: ogni lunedì alle 00:20 UTC per `1w` e il giorno 1 alle 00:20 UTC per `1mo`. Se c'è una nuova candela chiusa, il workflow committa su `main` articoli, grafici, `data.js` e `outbox/`, quindi l'archivio si aggiorna da solo. Se un report fallisce, il job fallisce e non pubblica nulla. Dai runner GitHub `api.binance.com` non è raggiungibile, quindi il workflow usa `BTC_TA_BINANCE_SPOT_URL=https://data-api.binance.vision`, l'host pubblico di Binance per gli stessi dati di mercato. Si può avviare a mano da *Actions → OnlySats update → Run workflow*.
+
 ## Pubblicazione e Telegram
 
-La generazione del sito e la notifica sono due passi separati: il messaggio va inviato **dopo** che la nuova versione del sito è online. La scelta dell'hosting e l'attivazione della pianificazione sono ancora da configurare. Il canale Telegram non è collegato e nessun messaggio viene inviato dall'aggiornamento locale.
+La generazione del sito e la notifica sono due passi separati: il messaggio va inviato **dopo** che la nuova versione del sito è online. La scelta dell'hosting è ancora da configurare. Il canale Telegram non è collegato e nessun messaggio viene inviato dall'aggiornamento locale.
 
 Quando il sito e il canale saranno pronti, configura `ONLYSATS_SITE_URL` con l'URL pubblico della cartella del blog, `TELEGRAM_BOT_TOKEN` e `TELEGRAM_CHAT_ID` nell'ambiente di esecuzione. Dopo il deploy, controlla i messaggi con:
 

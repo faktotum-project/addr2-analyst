@@ -2,6 +2,8 @@
 import { getJSON } from '../http.mjs';
 
 const INTERVAL = { '15m': '15m', '1h': '1h', '4h': '4h', '1d': '1d', '1w': '1w', '1mo': '1M' };
+// Spot market-data host; BTC_TA_BINANCE_SPOT_URL=https://data-api.binance.vision serves the same klines where api.binance.com is geo-blocked.
+const SPOT_URL = (process.env.BTC_TA_BINANCE_SPOT_URL || 'https://api.binance.com').replace(/\/$/, '');
 const toCandle = k => ({ time: Math.floor(k[0] / 1000), open: +k[1], high: +k[2], low: +k[3], close: +k[4], volume: +k[5], quoteVolume: +k[7] });
 
 export const candles = {
@@ -16,7 +18,7 @@ export const candles = {
     let endTime;
     while (out.length < bars) {
       const limit = Math.min(1000, bars - out.length);
-      const url = `https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=${INTERVAL[tf]}&limit=${limit}` + (endTime ? `&endTime=${endTime}` : '');
+      const url = `${SPOT_URL}/api/v3/klines?symbol=BTCUSDT&interval=${INTERVAL[tf]}&limit=${limit}` + (endTime ? `&endTime=${endTime}` : '');
       const rows = await getJSON(url);
       if (!rows.length) break;
       out.unshift(...rows.map(toCandle));
