@@ -1,0 +1,67 @@
+# Pubblica le analisi OnlySats a candela chiusa: 1W ogni lunedì, 1M il primo del mese.
+# Se un report fallisce il job fallisce (GitHub avvisa via email) e non viene pubblicato nulla.
+name: OnlySats update
+
+on:
+  schedule:
+    - cron: '20 0 * * 1'   # lunedì 00:20 UTC, dopo la chiusura della candela settimanale
+    - cron: '20 0 1 * *'   # giorno 1 alle 00:20 UTC, dopo la chiusura della candela mensile
+  workflow_dispatch:
+    inputs:
+      tf:
+        description: 'Timeframe da aggiornare'
+        type: choice
+        options: ['1w,1mo', '1w', '1mo']
+        default: '1w,1mo'
+
+permissions:
+  contents: write
+
+# Un lunedì che cade il primo del mese avvia due esecuzioni: vanno in coda, non in parallelo.
+concurrency:
+  group: onlysats-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      # api.binance.com è bloccato dai runner GitHub (USA); stesso dato di mercato dall'host pubblico di Binance.
+      BTC_TA_BINANCE_SPOT_URL: https://data-api.binance.vision
+      BTC_TA_HISTORY: candles
+      BTC_TA_DERIVATIVES: none
+      BTC_TA_SENTIMENT: none
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Scegli il timeframe
+        id: tf
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "tf=${{ inputs.tf }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "20 0 1 * *" ]; then
+            echo "tf=1mo" >> "$GITHUB_OUTPUT"
+          else
+            echo "tf=1w" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Genera le analisi
+        run: node onlysats-analysis/update.mjs --run --tf "${{ steps.tf.outputs.tf }}"
+
+      - name: Pubblica nel repository
+        run: |
+          git add onlysats-analysis/content onlysats-analysis/assets onlysats-analysis/data.js onlysats-analysis/outbox
+          if git diff --cached --quiet; then
+            echo "Nessuna nuova candela chiusa: niente da pubblicare."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git commit -m "OnlySats: nuove analisi ${{ steps.tf.outputs.tf }} ($(date -u +%Y-%m-%d))"
+          git pull --rebase origin main
+          git push origin HEAD:main
