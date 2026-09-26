@@ -3,7 +3,7 @@
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { parseArgs } from 'node:util';
-import { readFile, writeFile, rename, mkdir, copyFile } from 'node:fs/promises';
+import { readFile, writeFile, rename, mkdir, copyFile, rm } from 'node:fs/promises';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { makeArticle, miniSummary } from './author.mjs';
@@ -90,14 +90,23 @@ for (const item of additions) {
 const candidate = [...additions.map(item => item.article), ...existing];
 const dated = await Promise.all(candidate.map(async entry => ({
   entry,
-  asOf: JSON.parse(await readFile(resolve(siteDir, entry.summary), 'utf8')).meta.asOf
+  meta: JSON.parse(await readFile(resolve(siteDir, entry.summary), 'utf8')).meta
 })));
-dated.sort((a, b) => b.asOf - a.asOf);
-const ordered = dated.map(item => item.entry);
+// A closed bar supersedes an article written on the same bar while it was still open.
+const closedBars = new Set(additions.map(item => `${item.summary.meta.timeframe}:${item.summary.meta.asOf}`));
+const superseded = dated.filter(({ meta }) => !meta.lastBarClosed && closedBars.has(`${meta.timeframe}:${meta.asOf}`)).map(item => item.entry);
+const kept = dated.filter(item => !superseded.includes(item.entry));
+kept.sort((a, b) => b.meta.asOf - a.meta.asOf);
+const ordered = kept.map(item => item.entry);
 const temporaryContent = join(siteDir, 'content/articles.pending.json');
 await writeFile(temporaryContent, JSON.stringify(ordered, null, 2) + '\n');
 await exec(process.execPath, [join(siteDir, 'build.mjs'), temporaryContent], { cwd: projectDir, timeout: 60000 });
 await rename(temporaryContent, contentFile);
+for (const entry of superseded) {
+  await rm(join(siteDir, 'content/reports', entry.id), { recursive: true, force: true });
+  for (const file of [entry.chart, entry.cycleChart].filter(Boolean)) await rm(join(siteDir, file), { force: true });
+  console.log(`Sostituito dalla candela chiusa: ${entry.id}`);
+}
 
 const outboxDir = join(siteDir, 'outbox');
 await mkdir(outboxDir, { recursive: true });
