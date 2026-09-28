@@ -22,26 +22,26 @@
     },
     "asOf": 1789948800,
     "asOfIso": "2026-09-21 00:00 UTC",
-    "lastBarClosed": false,
-    "generatedAt": "2026-09-24T16:18:00.966Z",
+    "lastBarClosed": true,
+    "generatedAt": "2026-09-28T05:29:16.862Z",
     "warnings": []
   },
   "price": {
-    "last": 84800.02,
+    "last": 84472,
     "open": 81178.01,
     "high": 87395.67,
     "low": 80850.22,
-    "changePct": 4.46,
-    "change20BarsPct": 3.15,
+    "changePct": 4.06,
+    "change20BarsPct": 2.75,
     "rangeHigh": 126199.63,
     "rangeLow": 2817
   },
   "trend": {
-    "ema20": 73713,
-    "ema50": 77828,
-    "ema200": 68865,
-    "sma200": 65841,
-    "priceVsEma200Pct": 23.14,
+    "ema20": 73682,
+    "ema50": 77815,
+    "ema200": 68862,
+    "sma200": 65839,
+    "priceVsEma200Pct": 22.67,
     "adx": 27.3,
     "plusDI": 28.4,
     "minusDI": 14.6,
@@ -53,12 +53,12 @@
     }
   },
   "momentum": {
-    "rsi": 61.8,
+    "rsi": 61.6,
     "rsiPrev": 58.7,
     "rsiZone": "neutro",
-    "macd": 892,
-    "macdSignal": -1915,
-    "macdHist": 2807,
+    "macd": 866,
+    "macdSignal": -1920,
+    "macdHist": 2786,
     "macdHistSlope": "in aumento",
     "stochK": 94,
     "stochD": 94.1,
@@ -123,20 +123,20 @@
   },
   "volatility": {
     "atr": 6369,
-    "atrPct": 7.51,
-    "bbUpper": 85839,
-    "bbMid": 70383,
-    "bbLower": 54928,
-    "bbPctB": 0.97,
-    "bbWidth": 0.4392,
+    "atrPct": 7.54,
+    "bbUpper": 85762,
+    "bbMid": 70367,
+    "bbLower": 54972,
+    "bbPctB": 0.96,
+    "bbWidth": 0.4376,
     "bbWidthPercentile": 30,
     "squeeze": false
   },
   "volume": {
-    "last": 89696.3,
-    "vsSma20": 0.79,
+    "last": 129875.6,
+    "vsSma20": 1.13,
     "obvAboveEma": true,
-    "anchoredVwap": 74692,
+    "anchoredVwap": 74706,
     "vwapAnchor": "2023-11-13 00:00 UTC"
   },
   "volumeProfile": {
@@ -148,7 +148,7 @@
       "poc": 64465,
       "vah": 103751,
       "val": 57249,
-      "pocDistancePct": -23.98,
+      "pocDistancePct": -23.69,
       "position": "nella value area, sopra il POC"
     },
     "recent": {
@@ -159,7 +159,7 @@
       "poc": 64958,
       "vah": 92795,
       "val": 60982,
-      "pocDistancePct": -23.4,
+      "pocDistancePct": -23.1,
       "position": "nella value area, sopra il POC"
     }
   },
@@ -167,21 +167,21 @@
     "supports": [
       {
         "price": 81725,
-        "distancePct": -3.63,
+        "distancePct": -3.25,
         "touches": 2,
         "strength": 2.86,
         "lastTouch": "2026-05-04 00:00 UTC"
       },
       {
         "price": 57549,
-        "distancePct": -32.14,
+        "distancePct": -31.87,
         "touches": 29,
         "strength": 33.91,
         "lastTouch": "2026-07-20 00:00 UTC"
       },
       {
         "price": 15291,
-        "distancePct": -81.97,
+        "distancePct": -81.9,
         "touches": 48,
         "strength": 40.29,
         "lastTouch": "2023-09-11 00:00 UTC"
@@ -190,28 +190,28 @@
     "resistances": [
       {
         "price": 89257,
-        "distancePct": 5.26,
+        "distancePct": 5.66,
         "touches": 1,
         "strength": 1.31,
         "lastTouch": "2025-01-13 00:00 UTC"
       },
       {
         "price": 99375,
-        "distancePct": 17.19,
+        "distancePct": 17.64,
         "touches": 3,
         "strength": 4.17,
         "lastTouch": "2026-01-12 00:00 UTC"
       },
       {
         "price": 109294,
-        "distancePct": 28.88,
+        "distancePct": 29.38,
         "touches": 4,
         "strength": 5.35,
         "lastTouch": "2025-09-01 00:00 UTC"
       },
       {
         "price": 124631,
-        "distancePct": 46.97,
+        "distancePct": 47.54,
         "touches": 3,
         "strength": 4.14,
         "lastTouch": "2025-10-06 00:00 UTC"
@@ -232,37 +232,37 @@
         {
           "ratio": 0,
           "price": 126200,
-          "distancePct": 48.82
+          "distancePct": 49.4
         },
         {
           "ratio": 0.236,
           "price": 104629,
-          "distancePct": 23.38
+          "distancePct": 23.86
         },
         {
           "ratio": 0.382,
           "price": 91285,
-          "distancePct": 7.65
+          "distancePct": 8.07
         },
         {
           "ratio": 0.5,
           "price": 80500,
-          "distancePct": -5.07
+          "distancePct": -4.7
         },
         {
           "ratio": 0.618,
           "price": 69715,
-          "distancePct": -17.79
+          "distancePct": -17.47
         },
         {
           "ratio": 0.786,
           "price": 54360,
-          "distancePct": -35.9
+          "distancePct": -35.65
         },
         {
           "ratio": 1,
           "price": 34800,
-          "distancePct": -58.96
+          "distancePct": -58.8
         }
       ],
       "extensions": [
@@ -289,7 +289,7 @@
           "time": "2025-11-17 00:00 UTC"
         },
         "valueNow": 88977,
-        "distancePct": 4.93
+        "distancePct": 5.33
       },
       {
         "kind": "resistance",
@@ -303,7 +303,7 @@
           "time": "2026-07-20 00:00 UTC"
         },
         "valueNow": 53952,
-        "distancePct": -36.38
+        "distancePct": -36.13
       }
     ],
     "candlePatterns": [
@@ -374,66 +374,66 @@
   "derivatives": null,
   "sentiment": null,
   "cycle": {
-    "price": 84800.02,
-    "asOf": "2026-09-24 00:00 UTC",
-    "mayerMultiple": 1.196,
-    "sma200d": 70889,
-    "wma200": 65611,
-    "priceTo200wMA": 1.292,
-    "wma200GrowthMoMPct": 2.03,
+    "price": 83109.57,
+    "asOf": "2026-09-28 00:00 UTC",
+    "mayerMultiple": 1.168,
+    "sma200d": 71172,
+    "wma200": 65804,
+    "priceTo200wMA": 1.263,
+    "wma200GrowthMoMPct": 2.07,
     "piCycle": {
-      "sma111": 68585,
-      "sma350x2": 157390,
-      "ratio": 0.436,
+      "sma111": 69366,
+      "sma350x2": 156717,
+      "ratio": 0.443,
       "lastCross": {
         "time": "2021-04-23 00:00 UTC",
         "dir": "down"
       }
     },
     "powerLaw": {
-      "fairValue": 97967,
-      "residualPercentile": 40.9,
+      "fairValue": 98100,
+      "residualPercentile": 39.8,
       "band": "tra Accumulate e Fair value",
       "bands": [
         {
           "name": "Fire sale",
-          "price": 44551
+          "price": 44629
         },
         {
           "name": "Buy",
-          "price": 59469
+          "price": 59615
         },
         {
           "name": "Accumulate",
-          "price": 69062
+          "price": 69231
         },
         {
           "name": "Fair value",
-          "price": 97967
+          "price": 98100
         },
         {
           "name": "HODL",
-          "price": 145634
+          "price": 145937
         },
         {
           "name": "FOMO",
-          "price": 189957
+          "price": 190329
         },
         {
           "name": "Bubble",
-          "price": 286461
+          "price": 287062
         }
       ],
       "note": "Regressione log-log su Binance spot daily dal 2017; bande = quantili 2/10/25/50/75/90/98% dei residui; fair value = mediana. Modello descrittivo, non predittivo."
     },
     "halving": {
       "last": "2024-04-20",
-      "daysSince": 887,
+      "daysSince": 891,
       "nextEstimate": "2028-04-15",
-      "cycleProgressPct": 60.9
+      "cycleProgressPct": 61.2
     },
     "athClose": 124658.54,
-    "drawdownFromAthPct": -31.97
+    "drawdownFromAthPct": -33.33
   },
   "scores": {
     "trend": {
@@ -452,7 +452,7 @@
       "max": 4,
       "bias": "bullish",
       "reasons": [
-        "RSI 61.8 > 55",
+        "RSI 61.6 > 55",
         "istogramma MACD positivo",
         "MACD sopra zero",
         "StochRSI K < D"
@@ -473,9 +473,9 @@
       "max": 4,
       "bias": "neutral",
       "reasons": [
-        "Mayer 1.196",
-        "power law percentile 40.9",
-        "Pi Cycle ratio 0.436",
+        "Mayer 1.168",
+        "power law percentile 39.8",
+        "Pi Cycle ratio 0.443",
         "sopra la 200W MA"
       ]
     }
