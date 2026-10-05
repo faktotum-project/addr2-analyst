@@ -1,6 +1,8 @@
 {
   "id": "btc-1w-2026-09-28",
-  "status": "pending",
+  "status": "sent",
   "createdAt": "2026-10-05T05:47:17.760Z",
-  "text": "OnlySats Analysis · BTC settimanale\nCandela chiusa 2026-09-28 00:00 UTC: 86.530 USDT (+2,4%). Segnali prevalentemente positivi; RSI 63,3. Supporto 81.725, resistenza 98.062.\nLettura completa: #btc-1w-2026-09-28\nAnalisi informativa, non è consulenza finanziaria."
+  "text": "OnlySats Analysis · BTC settimanale\nCandela chiusa 2026-09-28 00:00 UTC: 86.530 USDT (+2,4%). Segnali prevalentemente positivi; RSI 63,3. Supporto 81.725, resistenza 98.062.\nLettura completa: #btc-1w-2026-09-28\nAnalisi informativa, non è consulenza finanziaria.",
+  "sentAt": "2026-10-05T05:47:35.739Z",
+  "telegramMessageId": 495
 }
