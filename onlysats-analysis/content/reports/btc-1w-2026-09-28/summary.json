@@ -1,0 +1,482 @@
+{
+  "meta": {
+    "pair": "BTC/USDT",
+    "timeframe": "1w",
+    "bars": 477,
+    "sources": {
+      "candles": {
+        "id": "binance",
+        "name": "Binance spot",
+        "attribution": "Binance",
+        "terms": "https://www.binance.com/en/terms",
+        "pair": "BTC/USDT"
+      },
+      "history": {
+        "id": "candles",
+        "name": "Binance spot daily",
+        "attribution": "Binance",
+        "terms": "https://www.binance.com/en/terms"
+      },
+      "derivatives": null,
+      "sentiment": null
+    },
+    "asOf": 1790553600,
+    "asOfIso": "2026-09-28 00:00 UTC",
+    "lastBarClosed": true,
+    "generatedAt": "2026-10-05T05:47:17.684Z",
+    "warnings": []
+  },
+  "price": {
+    "last": 86530,
+    "open": 84472.01,
+    "high": 87220,
+    "low": 82563,
+    "changePct": 2.44,
+    "change20BarsPct": 11.71,
+    "rangeHigh": 126199.63,
+    "rangeLow": 2817
+  },
+  "trend": {
+    "ema20": 74906,
+    "ema50": 78156,
+    "ema200": 69037,
+    "sma200": 66186,
+    "priceVsEma200Pct": 25.34,
+    "adx": 27.7,
+    "plusDI": 26.9,
+    "minusDI": 13.8,
+    "adxRegime": "trend forte",
+    "lastGoldenDeath": null,
+    "lastEma20_50Cross": {
+      "dir": "down",
+      "barsAgo": 36
+    }
+  },
+  "momentum": {
+    "rsi": 63.3,
+    "rsiPrev": 61.6,
+    "rsiZone": "neutro",
+    "macd": 1725,
+    "macdSignal": -1191,
+    "macdHist": 2916,
+    "macdHistSlope": "in aumento",
+    "stochK": 99.6,
+    "stochD": 95.9,
+    "divergences": [
+      {
+        "type": "bullish",
+        "from": {
+          "time": "2024-07-01 00:00 UTC",
+          "price": 53485.93,
+          "rsi": 45.8
+        },
+        "to": {
+          "time": "2024-08-05 00:00 UTC",
+          "price": 49000,
+          "rsi": 48.5
+        },
+        "barsAgo": 112
+      },
+      {
+        "type": "bearish",
+        "from": {
+          "time": "2025-01-20 00:00 UTC",
+          "price": 109588,
+          "rsi": 68.4
+        },
+        "to": {
+          "time": "2025-05-19 00:00 UTC",
+          "price": 111980,
+          "rsi": 67.5
+        },
+        "barsAgo": 71
+      },
+      {
+        "type": "bearish",
+        "from": {
+          "time": "2025-08-11 00:00 UTC",
+          "price": 124474,
+          "rsi": 63.6
+        },
+        "to": {
+          "time": "2025-10-06 00:00 UTC",
+          "price": 126199.63,
+          "rsi": 55.4
+        },
+        "barsAgo": 51
+      },
+      {
+        "type": "bullish",
+        "from": {
+          "time": "2026-03-23 00:00 UTC",
+          "price": 65000,
+          "rsi": 31.8
+        },
+        "to": {
+          "time": "2026-06-29 00:00 UTC",
+          "price": 57800.19,
+          "rsi": 38.2
+        },
+        "barsAgo": 13
+      }
+    ]
+  },
+  "volatility": {
+    "atr": 6247,
+    "atrPct": 7.22,
+    "bbUpper": 87505,
+    "bbMid": 70821,
+    "bbLower": 54136,
+    "bbPctB": 0.97,
+    "bbWidth": 0.4712,
+    "bbWidthPercentile": 35,
+    "squeeze": false
+  },
+  "volume": {
+    "last": 111091.8,
+    "vsSma20": 0.96,
+    "obvAboveEma": true,
+    "anchoredVwap": 75107,
+    "vwapAnchor": "2023-11-20 00:00 UTC"
+  },
+  "volumeProfile": {
+    "anchored": {
+      "window": "dallo swing 2023-11-20 00:00 UTC",
+      "bars": 150,
+      "volumeUnit": "USDT",
+      "binSizeUsd": 1562,
+      "poc": 64520,
+      "vah": 102777,
+      "val": 57493,
+      "pocDistancePct": -25.44,
+      "position": "nella value area, sopra il POC"
+    },
+    "recent": {
+      "window": "52 settimane",
+      "bars": 52,
+      "volumeUnit": "USDT",
+      "binSizeUsd": 1555,
+      "poc": 66350,
+      "vah": 92000,
+      "val": 60909,
+      "pocDistancePct": -23.32,
+      "position": "nella value area, sopra il POC"
+    }
+  },
+  "structure": {
+    "supports": [
+      {
+        "price": 81725,
+        "distancePct": -5.55,
+        "touches": 2,
+        "strength": 2.86,
+        "lastTouch": "2026-05-04 00:00 UTC"
+      },
+      {
+        "price": 57549,
+        "distancePct": -33.49,
+        "touches": 29,
+        "strength": 33.87,
+        "lastTouch": "2026-07-20 00:00 UTC"
+      },
+      {
+        "price": 15291,
+        "distancePct": -82.33,
+        "touches": 48,
+        "strength": 40.26,
+        "lastTouch": "2023-09-11 00:00 UTC"
+      }
+    ],
+    "resistances": [
+      {
+        "price": 98062,
+        "distancePct": 13.33,
+        "touches": 2,
+        "strength": 2.78,
+        "lastTouch": "2026-01-12 00:00 UTC"
+      },
+      {
+        "price": 102000,
+        "distancePct": 17.88,
+        "touches": 1,
+        "strength": 1.39,
+        "lastTouch": "2025-10-06 00:00 UTC"
+      },
+      {
+        "price": 109294,
+        "distancePct": 26.31,
+        "touches": 4,
+        "strength": 5.35,
+        "lastTouch": "2025-09-01 00:00 UTC"
+      },
+      {
+        "price": 124631,
+        "distancePct": 44.03,
+        "touches": 3,
+        "strength": 4.13,
+        "lastTouch": "2025-10-06 00:00 UTC"
+      }
+    ],
+    "fibonacci": {
+      "direction": "up",
+      "lookbackBars": 150,
+      "swingFrom": {
+        "price": 35632,
+        "time": "2023-11-20 00:00 UTC"
+      },
+      "swingTo": {
+        "price": 126200,
+        "time": "2025-10-06 00:00 UTC"
+      },
+      "levels": [
+        {
+          "ratio": 0,
+          "price": 126200,
+          "distancePct": 45.84
+        },
+        {
+          "ratio": 0.236,
+          "price": 104826,
+          "distancePct": 21.14
+        },
+        {
+          "ratio": 0.382,
+          "price": 91603,
+          "distancePct": 5.86
+        },
+        {
+          "ratio": 0.5,
+          "price": 80916,
+          "distancePct": -6.49
+        },
+        {
+          "ratio": 0.618,
+          "price": 70229,
+          "distancePct": -18.84
+        },
+        {
+          "ratio": 0.786,
+          "price": 55013,
+          "distancePct": -36.42
+        },
+        {
+          "ratio": 1,
+          "price": 35632,
+          "distancePct": -58.82
+        }
+      ],
+      "extensions": [
+        {
+          "ratio": 1.272,
+          "price": 150834
+        },
+        {
+          "ratio": 1.618,
+          "price": 182170
+        }
+      ]
+    },
+    "trendlines": [
+      {
+        "kind": "support",
+        "broken": true,
+        "from": {
+          "price": 74508,
+          "time": "2025-04-07 00:00 UTC"
+        },
+        "to": {
+          "price": 80600,
+          "time": "2025-11-17 00:00 UTC"
+        },
+        "valueNow": 89167,
+        "distancePct": 3.05
+      },
+      {
+        "kind": "resistance",
+        "broken": true,
+        "from": {
+          "price": 82850,
+          "time": "2026-05-04 00:00 UTC"
+        },
+        "to": {
+          "price": 66956,
+          "time": "2026-07-20 00:00 UTC"
+        },
+        "valueNow": 52507,
+        "distancePct": -39.32
+      }
+    ],
+    "candlePatterns": [
+      {
+        "time": "2026-06-15 00:00 UTC",
+        "name": "Bearish engulfing",
+        "bias": "bearish",
+        "barsAgo": 15
+      },
+      {
+        "time": "2026-06-29 00:00 UTC",
+        "name": "Bullish engulfing",
+        "bias": "bullish",
+        "barsAgo": 13
+      },
+      {
+        "time": "2026-07-27 00:00 UTC",
+        "name": "Bearish engulfing",
+        "bias": "bearish",
+        "barsAgo": 9
+      },
+      {
+        "time": "2026-08-17 00:00 UTC",
+        "name": "Bullish engulfing",
+        "bias": "bullish",
+        "barsAgo": 6
+      },
+      {
+        "time": "2026-08-24 00:00 UTC",
+        "name": "Doji",
+        "bias": "neutral",
+        "barsAgo": 5
+      },
+      {
+        "time": "2026-08-31 00:00 UTC",
+        "name": "Bullish engulfing",
+        "bias": "bullish",
+        "barsAgo": 4
+      },
+      {
+        "time": "2026-09-07 00:00 UTC",
+        "name": "Bearish engulfing",
+        "bias": "bearish",
+        "barsAgo": 3
+      },
+      {
+        "time": "2026-09-14 00:00 UTC",
+        "name": "Bullish engulfing",
+        "bias": "bullish",
+        "barsAgo": 2
+      }
+    ],
+    "lastSwingHigh": {
+      "price": 66956.15,
+      "time": "2026-07-20 00:00 UTC"
+    },
+    "lastSwingLow": {
+      "price": 57800.19,
+      "time": "2026-06-29 00:00 UTC"
+    }
+  },
+  "derivatives": null,
+  "sentiment": null,
+  "cycle": {
+    "price": 85720,
+    "asOf": "2026-10-05 00:00 UTC",
+    "mayerMultiple": 1.197,
+    "sma200d": 71618,
+    "wma200": 66143,
+    "priceTo200wMA": 1.296,
+    "wma200GrowthMoMPct": 2.14,
+    "piCycle": {
+      "sma111": 70655,
+      "sma350x2": 155742,
+      "ratio": 0.454,
+      "lastCross": {
+        "time": "2021-04-23 00:00 UTC",
+        "dir": "down"
+      }
+    },
+    "powerLaw": {
+      "fairValue": 98250,
+      "residualPercentile": 41.1,
+      "band": "tra Accumulate e Fair value",
+      "bands": [
+        {
+          "name": "Fire sale",
+          "price": 44770
+        },
+        {
+          "name": "Buy",
+          "price": 59852
+        },
+        {
+          "name": "Accumulate",
+          "price": 69570
+        },
+        {
+          "name": "Fair value",
+          "price": 98250
+        },
+        {
+          "name": "HODL",
+          "price": 146437
+        },
+        {
+          "name": "FOMO",
+          "price": 190874
+        },
+        {
+          "name": "Bubble",
+          "price": 288130
+        }
+      ],
+      "note": "Regressione log-log su Binance spot daily dal 2017; bande = quantili 2/10/25/50/75/90/98% dei residui; fair value = mediana. Modello descrittivo, non predittivo."
+    },
+    "halving": {
+      "last": "2024-04-20",
+      "daysSince": 898,
+      "nextEstimate": "2028-04-15",
+      "cycleProgressPct": 61.7
+    },
+    "athClose": 124658.54,
+    "drawdownFromAthPct": -31.24
+  },
+  "scores": {
+    "trend": {
+      "score": 2,
+      "max": 4,
+      "bias": "bullish",
+      "reasons": [
+        "prezzo sopra EMA200",
+        "EMA50 > EMA200",
+        "EMA20 < EMA50",
+        "+DI > −DI"
+      ]
+    },
+    "momentum": {
+      "score": 4,
+      "max": 4,
+      "bias": "bullish",
+      "reasons": [
+        "RSI 63.3 > 55",
+        "istogramma MACD positivo",
+        "MACD sopra zero",
+        "StochRSI K > D"
+      ]
+    },
+    "volume": {
+      "score": 3,
+      "max": 3,
+      "bias": "bullish",
+      "reasons": [
+        "OBV sopra la sua EMA20",
+        "prezzo sopra VWAP ancorato",
+        "prezzo sopra POC dello swing"
+      ]
+    },
+    "cycle": {
+      "score": 0,
+      "max": 4,
+      "bias": "neutral",
+      "reasons": [
+        "Mayer 1.197",
+        "power law percentile 41.1",
+        "Pi Cycle ratio 0.454",
+        "sopra la 200W MA"
+      ]
+    }
+  },
+  "overall": {
+    "score": 64,
+    "bias": "bullish",
+    "note": "score −100…+100, media pesata dei blocchi"
+  }
+}
