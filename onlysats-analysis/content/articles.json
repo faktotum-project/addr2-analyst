@@ -1,5 +1,79 @@
 [
   {
+    "id": "btc-1w-2026-10-12",
+    "title": "Bitcoin, lettura settimanale: segnali prevalentemente positivi",
+    "label": "Bitcoin · analisi settimanale",
+    "summary": "content/reports/btc-1w-2026-10-12/summary.json",
+    "candles": "content/reports/btc-1w-2026-10-12/candles.json",
+    "chart": "assets/btc-1w-2026-10-12-chart.html",
+    "cycleChart": "assets/btc-1w-2026-10-12-cycle.html",
+    "chartBars": 208,
+    "beginner": {
+      "intro": "Questa è la lettura settimanale della candela iniziata il 2026-10-12 00:00 UTC. Alla chiusura, Bitcoin valeva 82.116 USDT (-2,0% rispetto alla barra precedente). È una fotografia del passato, non un prezzo in tempo reale.",
+      "sections": [
+        {
+          "title": "La direzione del prezzo",
+          "body": "Il prezzo è sopra la media delle ultime 20 settimane e sopra la media a 50 settimane. Le medie aiutano a vedere la direzione generale: essere sopra una media non garantisce che il prezzo continui a salire."
+        },
+        {
+          "title": "La forza del movimento",
+          "body": "L'RSI è a 57,2, in una zona intermedia. Il MACD, un indicatore del ritmo del movimento, è positivo; la sua spinta recente è in calo. Il volume è 0,9 volte la media delle ultime 20 barre. Nessuno di questi segnali prevede da solo la prossima candela."
+        },
+        {
+          "title": "Le zone da osservare",
+          "body": "Il supporto più vicino è 81.725 USDT: una zona dove in passato il prezzo ha trovato compratori. La resistenza è 88.326 USDT: un'area dove ha incontrato venditori. Se il prezzo supera o perde una zona, è utile attendere la chiusura della candela prima di interpretare il cambiamento."
+        },
+        {
+          "title": "Bitcoin come riserva di valore",
+          "body": "Bitcoin ha un'offerta massima fissata dal protocollo e un'emissione di nuove monete che si dimezza circa ogni quattro anni: per questo molti lo usano come riserva di valore, cioè per conservare risparmi su orizzonti lunghi. Nelle 479 barre settimanali del report, il prezzo è passato da un minimo di 2817 USDT a 82.116 USDT: circa 29,2 volte il minimo della serie. La media delle ultime 200 settimane, una linea che riassume circa quattro anni di prezzi, è a 66.799 USDT ed è cresciuta del 2,2% nell'ultimo mese; il prezzo è 1,24 volte quella media. L'ultimo halving, il dimezzamento dei nuovi bitcoin emessi, risale al 2024-04-20. Il percorso non è stato lineare: oggi il prezzo è ancora 33,6% sotto la chiusura più alta di sempre (124.659 USDT). Per questo il suo valore si giudica su anni, non su singole settimane: i dati passati non garantiscono i risultati futuri."
+        }
+      ],
+      "glossary": [
+        {
+          "term": "Candela",
+          "meaning": "Riassume apertura, chiusura, massimo e minimo di una barra settimanale."
+        },
+        {
+          "term": "Media mobile",
+          "meaning": "Una linea che riassume i prezzi di un certo numero di barre. Descrive ciò che è già accaduto."
+        },
+        {
+          "term": "Supporto e resistenza",
+          "meaning": "Zone ricavate dalle reazioni passate del prezzo. Possono essere attraversate."
+        },
+        {
+          "term": "Halving",
+          "meaning": "Evento del protocollo che dimezza i nuovi bitcoin creati per ogni blocco. Rende l'emissione sempre più scarsa."
+        },
+        {
+          "term": "Riserva di valore",
+          "meaning": "Un bene usato per conservare ricchezza nel tempo. Per Bitcoin è una lettura di lungo periodo, con forti oscillazioni lungo il percorso."
+        }
+      ]
+    },
+    "pro": {
+      "intro": "BTC 1w a 82.116 USDT sulla barra chiusa del 2026-10-12 00:00 UTC; variazione -2,0%. Bias aggregato rialzista (50/100): è un punteggio meccanico da leggere insieme ai singoli blocchi.",
+      "sections": [
+        {
+          "title": "Trend e struttura",
+          "body": "Prezzo sopra EMA20 (76.356 USDT) e sopra EMA50 (78.523 USDT). ADX 27,0 con +DI 23,5 e −DI 15,1. La EMA200 è a 69.313 USDT."
+        },
+        {
+          "title": "Momentum e partecipazione",
+          "body": "RSI 57,2; istogramma MACD 2290, in calo. Il volume è 0,9 volte la media delle ultime 20 barre. OBV sopra EMA20. VWAP ancorato a 78.585 USDT."
+        },
+        {
+          "title": "Livelli e condizioni",
+          "body": "Supporto 81.725 USDT; resistenza 88.326 USDT. Una chiusura sopra la resistenza rafforzerebbe la lettura rialzista, mentre una chiusura sotto il supporto la indebolirebbe. Le zone provengono da pivot storici e non costituiscono obiettivi garantiti."
+        },
+        {
+          "title": "Orizzonte lungo",
+          "body": "Serie di 479 barre 1w: minimo 2817 USDT, prezzo attuale circa 29,2 volte quel minimo. 200WMA 66.799 USDT (+2,2% m/m), prezzo/200WMA 1,24; Mayer Multiple 1,14. Power law: fair value 98.477 USDT, residuo al 39,0° percentile (tra Accumulate e Fair value). Halving 2024-04-20, 912 giorni fa (62,6% del ciclo stimato). Drawdown dall'ATH di chiusura (124.659 USDT): -33,6%. Metriche descrittive di ciclo e di scarsità, non segnali di timing."
+        }
+      ]
+    }
+  },
+  {
     "id": "btc-1w-2026-10-05",
     "title": "Bitcoin, lettura settimanale: segnali prevalentemente positivi",
     "label": "Bitcoin · analisi settimanale",
