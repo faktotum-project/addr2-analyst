@@ -1,6 +1,8 @@
 {
   "id": "btc-1mo-2026-10-01",
-  "status": "pending",
+  "status": "sent",
   "createdAt": "2026-11-01T06:22:37.760Z",
-  "text": "OnlySats Analysis · BTC mensile\nCandela chiusa 2026-10-01 00:00 UTC: 77.582 USDT (-7,2%). Segnali prevalentemente positivi; RSI 50,3. Supporto 64.442, resistenza 109.588.\nLettura completa: #btc-1mo-2026-10-01\nAnalisi informativa, non è consulenza finanziaria."
+  "text": "OnlySats Analysis · BTC mensile\nCandela chiusa 2026-10-01 00:00 UTC: 77.582 USDT (-7,2%). Segnali prevalentemente positivi; RSI 50,3. Supporto 64.442, resistenza 109.588.\nLettura completa: #btc-1mo-2026-10-01\nAnalisi informativa, non è consulenza finanziaria.",
+  "sentAt": "2026-11-01T06:22:56.673Z",
+  "telegramMessageId": 508
 }
